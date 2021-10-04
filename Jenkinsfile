@@ -15,7 +15,7 @@ pipeline {
         }
         stage('e2e Tests') {
             steps {
-                sh 'npm cypress run --env allure=true'
+                sh 'npx cypress run --env allure=true'
             }
         }
     }
