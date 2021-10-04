@@ -1,0 +1,13 @@
+{
+  "baseUrl": "https://tailings.inmarsatinsight.com/",
+  "env": {
+    "admin": {
+      "username": "inmarsatDev2",
+      "password": "inmarsatDev2"
+    },
+    "dashboard": {
+      "username": "inmarsatUser",
+      "password": "inmarsatUser"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "baseUrl": "https://tia-uat.mobte.net/",
+  "env": {
+    "admin": {
+      "username": "multidemo2",
+      "password": "fS2L{maR"
+    },
+    "dashboard": {
+      "username": "inmarsatUser",
+      "password": "inmarsatUser"
+    },
+    "version": "2.8.3"
+  }
+}

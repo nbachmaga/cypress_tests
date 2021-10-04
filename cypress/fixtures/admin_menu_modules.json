@@ -1,0 +1,37 @@
+{
+  "modules_all": [
+    "DASHBOARD",
+    "Home",
+    "Metrics",
+    "DATA MANAGEMENT",
+    "Data Sources",
+    "Cross Sections",
+    "File Manager",
+    "Journal Manager",
+    "Data Entry",
+    "USER MANAGEMENT",
+    "Users",
+    "Roles",
+    "Permissions",
+    "COMMUNICATION",
+    "Messaging",
+    "Task Manager",
+    "Localization",
+    "Settings",
+    "About"
+  ],
+  "modules_clickable": [
+    "Home",
+    "Metrics",
+    "Data Sources",
+    "Cross Sections",
+    "File Manager",
+    "Journal Manager",
+    "Users",
+    "Roles",
+    "Permissions",
+    "Messaging",
+    "Task Manager",
+    "Localization"
+  ]
+}

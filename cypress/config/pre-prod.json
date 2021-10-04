@@ -1,0 +1,14 @@
+{
+  "baseUrl": "https://pre-tailings.inmarsatinsight.com/",
+  "env": {
+    "admin": {
+      "username": "qa_team_1_admin",
+      "password": "njraq#pV39"
+    },
+    "dashboard": {
+      "username": "inmarsatUser",
+      "password": "inmarsatUser"
+    },
+    "version": "2.4.1"
+  }
+}

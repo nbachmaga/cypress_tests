@@ -1,0 +1,23 @@
+{
+  "modules_all": [
+    "DASHBOARD",
+    "Home",
+    "Metrics",
+    "DATA MANAGEMENT",
+    "Cross Sections",
+    "File Manager",
+    "Journal Manager",
+    "COMMUNICATION",
+    "Messaging",
+    "Settings",
+    "About"
+  ],
+  "modules_clickable": [
+    "Home",
+    "Metrics",
+    "Cross Sections",
+    "File Manager",
+    "Journal Manager",
+    "Messaging"
+  ]
+}

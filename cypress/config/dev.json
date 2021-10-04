@@ -1,0 +1,14 @@
+{
+  "baseUrl": "https://tdms-dev.mobte.net/",
+  "env": {
+    "admin": {
+      "username": "multidemo2",
+      "password": "fS2L{maR"
+    },
+    "dashboard": {
+      "username": "inmarsatUser",
+      "password": "fS2L{maR"
+    },
+    "version": "v0.0.0"
+  }
+}

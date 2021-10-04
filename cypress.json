@@ -1,0 +1,21 @@
+{
+  "baseUrl": "https://tdms-stg.mobte.net/",
+  "defaultCommandTimeout": 30000,
+  "video": false,
+  "env": {
+    "admin": {
+      "username": "multidemo2",
+      "password": "fS2L{maR"
+    },
+    "dashboard": {
+      "username": "inmarsatUser",
+      "password": "fS2L{maR"
+    },
+    "version": "2.8.3",
+    "allureResultsPath": "allure-results"
+  },
+  "testFiles": [
+    "login_logout.spec.js"
+  ],
+  "projectId": "oevioo"
+}

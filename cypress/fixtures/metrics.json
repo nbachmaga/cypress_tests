@@ -1,0 +1,25 @@
+{
+  "device_monitoring": {
+    "card_name": "Test - Device Monitoring",
+    "data_source": "inmarsatDeviceMetrics",
+    "select_name": "Device Monitoring"
+  },
+  "map": {
+    "card_name": "Test - Map Card",
+    "data_source": "inmarsatDeviceMetrics",
+    "select_name": "Sensor Locations (map)"
+  },
+  "table": {
+    "card_name": "Test - Table Card",
+    "data_source": "inmarsatDeviceMetrics",
+    "select_name": "Data Tables",
+    "select_metric_type": "context metrics",
+    "select_field": "Phreatic Surface Elevation",
+    "select_type": "metric"
+  },
+  "chart": {
+    "card_name": "Test - Chart Card",
+    "data_source": "inmarsatMetrics",
+    "select_name": "67. History - TO-1-3 (1052)"
+  }
+}
