@@ -15,7 +15,18 @@ pipeline {
         }
         stage('e2e Tests') {
             steps {
-                sh 'npx cypress run --env allure=true'
+                sh 'npx cypress run'
+            }
+        }
+        stage('Reports') {
+            steps {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'allure-results']]
+                ])
             }
         }
     }
