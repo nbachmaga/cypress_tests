@@ -17,8 +17,7 @@ pipeline {
             steps {
                 sh 'npx cypress run'
             }
-        }
-        stage('Reports') {
+            stage('Reports') {
             steps {
                 allure([
                     includeProperties: false,
@@ -29,5 +28,6 @@ pipeline {
                 ])
             }
         }
+        } 
     }
 }
