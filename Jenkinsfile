@@ -15,7 +15,13 @@ pipeline {
         }
         stage('e2e Tests') {
             steps {
+                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 sh 'npm run test:allure'
+                 }
+            }    
+        }
+        stage('Reports') {
+            steps {
                 script {
                 allure([
                     includeProperties: false,
