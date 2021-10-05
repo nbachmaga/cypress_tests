@@ -16,8 +16,6 @@ pipeline {
         stage('e2e Tests') {
             steps {
                 sh 'npm run test:allure'
-            }
-            steps {
                 script {
                 allure([
                     includeProperties: false,
