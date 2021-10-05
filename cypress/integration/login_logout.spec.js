@@ -51,56 +51,10 @@ states.forEach((state) => {
             cy.wait(2000)
             cy.get('[type="submit"]').click()
 
-            cy.url().should('contain', '/module-loader/Metrics')
+            cy.url().should('contain', '/module-loader/Metrics2')
 
             cy.get('[data-cy="admin_main_header_project-selector"] input').should('have.value', projects.peru)
         })
-        // it('CCSDK_TC_SMK_03 Check correct version number displayed', () => {
-        //     cy.get('[data-cy="admin_main_header_version"]')
-        //         .should('have.attr', 'href', '/About')
-        //         .should('contain', Cypress.env().version)
-        //         .click()
-        //
-        //     cy.url().should('contain', '/About')
-        //
-        //     cy.get('h4').should('contain', 'About')
-        // })
-        //
-        // it('CCSDK_TC_SMK_04 (Peru) Check that ' + state.user_name + ' has full access to modules', () => {
-        //     cy.get('[data-cy="admin_main_header_menu-hamburger"]').click()
-        //
-        //     cy.checkAllModules(state.modules)
-        //     cy.clickAllModules(state.modules)
-        // })
-        //
-        // it('CCSDK_TC_SMK_05 (Australia) Check that ' + state.user_name + ' has full access to modules', () => {
-        //     cy.changeProject(projects.australia)
-        //
-        //     cy.checkAllModules(state.modules)
-        //     cy.clickAllModules(state.modules)
-        // })
-        //
-        // xit('CCSDK_TC_SMK_06 (Mexico) Check that ' + state.user_name + ' has full access to modules', () => {
-        //     cy.changeProject(projects.mexico)
-        //
-        //     cy.checkAllModules(state.modules)
-        //     cy.clickAllModules(state.modules)
-        // })
-        //
-        // it('CCSDK_TC_SMK_07 Check that a project can be changed', () => {
-        //     cy.get('[data-cy="admin_main_header_project-selector"] input').click({force: true})
-        //     cy.get('[data-cy="admin_select-project-page_select-project-form_projects-list"]').should('be.visible')
-        //     cy.get('[data-cy="admin_select-project-page_select-project-form_projects-list"] > div').should(($divs) => {
-        //         expect($divs).to.have.length(3)
-        //         expect($divs.eq(0)).to.contain(projects.australia)
-        //         expect($divs.eq(1)).to.contain(projects.mexico)
-        //         expect($divs.eq(2)).to.contain(projects.peru)
-        //     }).eq(2).click()
-        //     cy.get('h2').contains('Changing Project').should('be.visible')
-        //     cy.get('button').contains('Yes').click()
-        //     cy.get('[role="dialog"]').should('not.exist')
-        //     cy.get('[data-cy="admin_main_header_project-selector"] input').should('have.value', projects.peru)
-        // })
 
         it('CCSDK_TC_SMK_03 Check logout of ' + state.user_name + ' from Inmarsat TIA', () => {
             cy.get('[data-cy="admin_main_header_menu-hamburger"]').click()
