@@ -16,9 +16,7 @@ pipeline {
         stage('e2e Tests') {
             steps {
                 sh 'npm run test:allure'
-            }    
-        }
-        stage('Reports') {
+            }
             steps {
                 script {
                 allure([
