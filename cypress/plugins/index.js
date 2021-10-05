@@ -1,4 +1,4 @@
-/// <reference types="@shelex/cypress-allure-plugin" />
+/// <reference types="cypress" />
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -31,10 +31,3 @@ module.exports = (on, config) => {
 
     return getConfigurationByFile(file)
 }
-
-const allureWriter = require('@shelex/cypress-allure-plugin/writer');
-
-module.exports = (on, config) => {
-    allureWriter(on, config);
-    return config;
-};
