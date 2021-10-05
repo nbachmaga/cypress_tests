@@ -20,7 +20,7 @@ pipeline {
                  }
             }    
         }
-        stage('Reports') {
+        stage('Allure Report') {
             steps {
                 script {
                 allure([
@@ -31,6 +31,27 @@ pipeline {
                     results: [[path: 'target/allure-results']]
                 ])
                 }
+            }
+        }
+        stage('Jira Report') {
+            steps {
+                junit (
+ testResults: '**/surefire-reports/*.xml',
+ testDataPublishers: [
+   jiraTestResultReporter(
+     configs: [
+       jiraStringField(fieldKey: 'summary', value: '${DEFAULT_SUMMARY}'),
+       jiraStringField(fieldKey: 'description', value: '${DEFAULT_DESCRIPTION}'),
+       jiraStringArrayField(fieldKey: 'labels', values: [jiraArrayEntry(value: 'Jenkins'), jiraArrayEntry(value:'e2e')])
+     ],
+     projectKey: 'TEST',
+     issueType: 'Bug',
+     autoRaiseIssue: false,
+     autoResolveIssue: false,
+     autoUnlinkIssue: false,
+   )
+ ]
+)
             }
         }
     }
