@@ -36,7 +36,7 @@ pipeline {
         stage('Jira Report') {
             steps {
                 junit (
- testResults: '**/surefire-reports/*.xml',
+ testResults: 'target/allure-results/*.xml',
  testDataPublishers: [
    jiraTestResultReporter(
      configs: [
