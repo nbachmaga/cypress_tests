@@ -35,8 +35,9 @@ pipeline {
         }
         stage('Jira Report') {
             steps {
+                junit 'test-results.xml'
                 junit (
- testResults: '**/*.xml',
+ testResults: 'test-results.xml',
  testDataPublishers: [
    jiraTestResultReporter(
      configs: [
