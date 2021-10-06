@@ -35,7 +35,7 @@ pipeline {
         }
         stage('Integration') {
             steps {
-  junit 'test-results.xml'
+  junit skipPublishingChecks: true, testResults: 'test-results.xml'
             }
 }
         stage('Jira Report') {
