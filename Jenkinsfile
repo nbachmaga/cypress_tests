@@ -33,15 +33,10 @@ pipeline {
                 }
             }
         }
-        stage('Integration') {
-            steps {
-  junit skipPublishingChecks: true, testResults: 'test-results.xml'
-            }
-}
         stage('Jira Report') {
             steps {
                 junit (
- testResults: '**/*.xml',
+ testResults: 'test-results.xml',
  testDataPublishers: [
    jiraTestResultReporter(
      configs: [
@@ -60,4 +55,9 @@ pipeline {
             }
         }
     }
+    post {
+      always {
+        junit 'test-results.xml'
+      }
+   } 
 }
