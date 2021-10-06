@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://tdms-stg.mobte.net/",
+  "baseUrl": "https://tdms-dev.mobte.net/",
   "defaultCommandTimeout": 30000,
   "video": false,
   "env": {
