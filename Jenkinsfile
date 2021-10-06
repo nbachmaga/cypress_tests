@@ -34,7 +34,9 @@ pipeline {
             }
         }
         stage('Integration') {
+            steps {
   junit 'test-results.xml'
+            }
 }
         stage('Jira Report') {
             steps {
