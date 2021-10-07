@@ -10,6 +10,7 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
+                sh 'rm -rf node_modules package-lock.json && npm install && npm start'
                 sh 'npm i'
             }
         }
