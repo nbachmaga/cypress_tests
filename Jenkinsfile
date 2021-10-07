@@ -10,8 +10,8 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
-                sh 'rm -rf node_modules package-lock.json && npm install && npm start'
-                sh 'npm i'
+                sh 'rm -rf node_modules package-lock.json && npm install && npm i'
+                //sh 'npm i'
             }
         }
         stage('e2e Tests') {
