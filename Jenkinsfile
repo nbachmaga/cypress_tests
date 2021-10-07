@@ -17,7 +17,7 @@ pipeline {
             steps {
                  catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 //sh 'npm run test:allure'
-                     sh 'cypress run'
+                     sh 'npx cypress run'
                  }
             }  
         }
