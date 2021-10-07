@@ -59,7 +59,7 @@ pipeline {
        jiraStringArrayField(fieldKey: 'labels', values: [jiraArrayEntry(value: 'Jenkins'), jiraArrayEntry(value:'e2e')])
      ],
      projectKey: 'TEST',
-     issueType: 'Bug',
+     issueType: '10009',
      autoRaiseIssue: false,
      autoResolveIssue: false,
      autoUnlinkIssue: false,
