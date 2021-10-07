@@ -38,6 +38,7 @@ pipeline {
         stage('Jira Report') {
             steps {
                 junit (
+                    skipPublishingChecks: true
  testResults: '**/reports/junit/*.xml',
  testDataPublishers: [
    jiraTestResultReporter(
