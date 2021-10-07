@@ -17,24 +17,24 @@ pipeline {
         stage('e2e Tests') {
             steps {
                  catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                //sh 'npm run test:allure'
-                     sh 'npx cypress run'
+                sh 'npm run test:allure'
+                    // sh 'npx cypress run'
                  }
             }  
         }
-//         stage('Allure Report') {
-//             steps {
-//                 script {
-//                 allure([
-//                     includeProperties: false,
-//                     jdk: '',
-//                     properties: [],
-//                     reportBuildPolicy: 'ALWAYS',
-//                     results: [[path: 'target/allure-results']]
-//                 ])
-//                 }
-//             }
-//         }
+        stage('Allure Report') {
+            steps {
+                script {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'target/allure-results']]
+                ])
+                }
+            }
+        }
         stage('Jira Report') {
             steps {
                 junit (
