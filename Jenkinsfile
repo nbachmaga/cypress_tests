@@ -18,13 +18,13 @@ pipeline {
                  catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 sh 'npm run test:allure'
                  }
-            }    
-        }
-        post {
+            }  
+            post {
       always {
         junit allowEmptyResults: true, testResults: 'test-report.xml'
       }
    } 
+        }
         stage('Allure Report') {
             steps {
                 script {
