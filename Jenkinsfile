@@ -36,7 +36,7 @@ pipeline {
         stage('Jira Report') {
             steps {
                 junit (
- testResults: '**/reports/**/*.xml',
+ testResults: 'test-report.xml',
  testDataPublishers: [
    jiraTestResultReporter(
      configs: [
@@ -57,7 +57,7 @@ pipeline {
     }
     post {
       always {
-        junit allowEmptyResults: true, testResults: 'build/reports/**/*.xml'
+        junit allowEmptyResults: true, testResults: 'test-report.xml'
       }
    } 
 }
