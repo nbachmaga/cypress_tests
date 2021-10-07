@@ -10,10 +10,15 @@
     "cypress": "^8.5.0",
     "cypress-file-upload": "^4.1.1",
     "cypress-localstorage-commands": "^1.4.5",
+    "cypress-mochawesome-reporter": "^2.3.0",
     "mocha-allure-reporter": "^1.4.0"
   },
   "dependencies": {
-    "dayjs": "^1.10.4"
+    "cypress-multi-reporters": "^1.5.0",
+    "dayjs": "^1.10.4",
+    "junit-report-merger": "^3.0.2",
+    "mocha": "^9.1.2",
+    "mocha-junit-reporter": "^1.16.0"
   },
   "scripts": {
     "report:allure": "allure generate allure-results --clean -o allure-report",
