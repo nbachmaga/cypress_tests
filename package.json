@@ -22,6 +22,6 @@
   },
   "scripts": {
     "report:allure": "allure generate allure-results --clean -o allure-report",
-    "test:allure": "cypress run --reporter mocha-allure-reporter && npm run report:allure"
+    "test:allure": "cypress run && npm run report:allure"
   }
 }

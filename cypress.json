@@ -3,7 +3,7 @@
   "defaultCommandTimeout": 30000,
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
-    "reporterEnabled": "cypress-mochawesome-reporter, mocha-junit-reporter",
+    "reporterEnabled": "cypress-mochawesome-reporter, mocha-junit-reporter, mocha-allure-reporter",
     "cypressMochawesomeReporterReporterOptions": {
       "reportDir": "cypress/reports",
       "charts": true,
