@@ -19,11 +19,6 @@ pipeline {
                 sh 'npm run test:allure'
                  }
             }  
-            post {
-      always {
-        junit allowEmptyResults: true, testResults: 'test-report.xml'
-      }
-   } 
         }
         stage('Allure Report') {
             steps {
@@ -41,7 +36,7 @@ pipeline {
         stage('Jira Report') {
             steps {
                 junit (
- testResults: 'test-report.xml',
+ testResults: '**/reports/junit/*.xml',
  testDataPublishers: [
    jiraTestResultReporter(
      configs: [
