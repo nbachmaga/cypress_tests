@@ -20,6 +20,11 @@ pipeline {
                  }
             }    
         }
+        post {
+      always {
+        junit allowEmptyResults: true, testResults: 'test-report.xml'
+      }
+   } 
         stage('Allure Report') {
             steps {
                 script {
@@ -55,9 +60,4 @@ pipeline {
             }
         }
     }
-    post {
-      always {
-        junit allowEmptyResults: true, testResults: 'test-report.xml'
-      }
-   } 
 }
