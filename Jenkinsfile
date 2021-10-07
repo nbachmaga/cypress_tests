@@ -35,6 +35,17 @@ pipeline {
 //                 }
 //             }
 //         }
+        stage ('HTML Report') {
+            steps {
+            publishHTML (target : [allowMissing: false,
+            alwaysLinkToLastBuild: true,
+            keepAll: true,
+            reportDir: 'reports',
+            reportFiles: 'index.html',
+            reportName: 'My Reports',
+            reportTitles: 'The Report'])
+            }
+        }
         stage('Jira Report') {
             steps {
                 junit (
