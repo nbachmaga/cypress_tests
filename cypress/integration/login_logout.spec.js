@@ -51,7 +51,7 @@ states.forEach((state) => {
             cy.wait(2000)
             cy.get('[type="submit"]').click()
 
-            cy.url().should('contain', '/module-loader/Metrics2')
+            cy.url().should('contain', '/module-loader/Metrics')
 
             cy.get('[data-cy="admin_main_header_project-selector"] input').should('have.value', projects.peru)
         })
