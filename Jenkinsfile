@@ -60,8 +60,8 @@ pipeline {
      ],
      projectKey: 'TEST',
      issueType: '10009',
-     autoRaiseIssue: false,
-     autoResolveIssue: false,
+     autoRaiseIssue: true,
+     autoResolveIssue: true,
      autoUnlinkIssue: false,
    )
  ]
